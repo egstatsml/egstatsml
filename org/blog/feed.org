@@ -1,0 +1,116 @@
+#+TITLE: Peregrinator's blog feed
+
+* Book Review: Tomorrow Is One More Day
+:properties:
+:rss_permalink: book-review-tomorrow-is-one-more-day.html
+:pubdate: 2025-05-15 Thu
+:ID:       7ecc6272-a2b2-4db0-bda9-446f366b309e
+:END:
+* Introducing a new page on the website: Cat-a-log
+:properties:
+:rss_permalink: introducing-a-new-page-on-the-website-cat-a-log.html
+:pubdate: 2025-04-15 Tue
+:ID:       02a74154-cf73-4a2d-ac65-8422df0559ea
+:END:
+* What even is skramz
+:properties:
+:rss_permalink: what-even-is-skramz.html
+:pubdate: 2025-03-12 Wed
+:ID:       05f56f3e-898f-44b7-8afa-bc7014eadb3d
+:END:
+* Potentially returning to Sourcehut and my FOSS roots
+:properties:
+:rss_permalink: potentially-returning-to-sourcehut-and-my-foss-roots.html
+:pubdate: 2025-03-09 Sun
+:ID:       724b3a7a-3a5e-44f8-98a3-7e649b6855d6
+:END:
+* Should I still be using Firefox?
+:properties:
+:rss_permalink: should-i-still-be-using-firefox.html
+:pubdate: 2025-03-09 Sun
+:ID:       34ba57b7-2602-4052-9aae-c17765974adc
+:END:
+* The Sourcehut builds dilemma
+:properties:
+:rss_permalink: the-sourcehut-builds-dilemma.html
+:pubdate: 2025-02-16 Sun
+:ID:       5dc7fa24-a68f-4f97-8fed-a40dc19e8e97
+:END:
+* No more EOY lists for music
+:properties:
+:rss_permalink: no-more-eoy-lists-for-music.html
+:pubdate: 2025-01-15 Wed
+:ID:       dc4008e3-6db6-4c3c-88f0-ff05d8c737de
+:END:
+* Notes from a withdrawal episode (part 0)
+:properties:
+:rss_permalink: notes-from-a-withdrawal-episode-part-0.html
+:pubdate: 2023-03-30 Thu
+:ID:       a43f39f7-a2c0-4cee-855d-4498bc67fd5e
+:END:
+* Notes from a withdrawal episode
+:properties:
+:rss_permalink: notes-from-a-withdrawal-episode.html
+:pubdate: 2023-03-16 Thu
+:ID:       9dc391bd-9d4d-4547-aa52-ebc5419c2b32
+:END:
+* Moved to Sourcehut!
+:properties:
+:rss_permalink: moved-to-sourcehut.html
+:pubdate: 2023-03-04 Sat
+:ID:       0511cc29-29b3-4322-9f72-3ed5da4ee4a3
+:END:
+* Albums of the Year (2022)
+:properties:
+:rss_permalink: albums-of-the-year-2022.html
+:pubdate: 2023-02-27 Mon
+:ID:       2d91ee2e-d91e-48fb-a943-931ecdae1054
+:END:
+* Blog revamp and starting to understand Hugo better
+:properties:
+:rss_permalink: blog-revamp-and-starting-to-understand-hugo-better.html
+:pubdate: 2023-02-23 Thu
+:ID:       e691b6c2-cc7f-4162-abea-3b52f7d6f2ab
+:END:
+* Having to use Windows, reluctantly
+:properties:
+:rss_permalink: having-to-use-windows-reluctantly.html
+:pubdate: 2022-12-09 Fri
+:ID:       f8350b66-f615-46e2-a07a-4c240c4cb59b
+:END:
+* Hugo, Org and starting over at a new blog
+:properties:
+:rss_permalink: hugo-org-and-starting-over-at-a-new-blog.html
+:pubdate: 2022-12-05 Mon
+:ID:       d8d0f0e8-9c1b-4765-865b-193f7d733182
+:END:
+* How culture has affected natural selection in man
+:properties:
+:rss_permalink: how-culture-has-affected-natural-selection-in-man.html
+:pubdate: 2018-03-06 Tue
+:ID:       4f1f5ae8-8829-4a8a-bbff-28ea73ac4f31
+:END:
+* Pets, put in context
+:properties:
+:rss_permalink: pets-put-in-context.html
+:pubdate: 2017-06-15 Thu
+:ID:       7c8e65c0-ba9a-47e1-b047-2ac5fefbc5c2
+:END:
+* Sustainability and the Common Man
+:properties:
+:rss_permalink: sustainability-and-the-common-man.html
+:pubdate: 2017-03-20 Mon
+:ID:       5a8fc2b7-4429-464e-9ce5-bcdc4cfba091
+:END:
+* Misunderstanding evolution
+:properties:
+:rss_permalink: misunderstanding-evolution.html
+:pubdate: 2017-02-27 Mon
+:ID:       b00f9d96-7c38-4d4e-92e0-427b50e7a6bb
+:END:
+* A dark side to pets
+:properties:
+:rss_permalink: a-dark-side-to-pets.html
+:pubdate: 2016-01-15 Fri
+:ID:       c414bab1-10fa-4513-a2b8-e3f73300270a
+:END:

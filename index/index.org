@@ -1,0 +1,29 @@
+#+title: Ethan Goan
+#+description: Site for sharing some of my work
+#+SUBTITLE:
+#+META_TYPE: website
+
+
+* empty
+:PROPERTIES:
+:CUSTOM_ID: empty
+:UNNUMBERED: notoc
+:END:
+
+# #+begin_marginnote
+# #+caption: me
+# [[file:media/me.jpg]]
+# #+end_marginnote
+
+#+begin_export html
+<br>
+<hr style="margin-bottom:0;width:100%;"/>
+#+end_export
+
+
+* Posts archive
+:PROPERTIES:
+:CUSTOM_ID: h:821faef5-3755-4441-a3e7-c795f68075d9
+:END:
+
+#+INCLUDE: "../blog/index.org" :lines "1-"

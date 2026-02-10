@@ -1,0 +1,6 @@
+#+title: Literate Emacs Configuration
+#+author: Brihadeesh S
+#+options: toc:t
+#+todo: TODO(t) | DISABLED(d)
+
+#+include: "../configuration.org" :lines "8-"

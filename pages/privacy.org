@@ -1,0 +1,86 @@
+#+title: Privacy
+#+options: toc:t
+
+Being the weird privacy nerd that I am, I've taken steps to ensure
+that there is very little date about myself on this site that can be
+really abused. I have also designed the website in such a way that
+people visiting don't have to leave behind any kind of data.
+
+* Analytics
+:PROPERTIES:
+:CUSTOM_ID: h:c0512729-4378-4c33-a7f5-5edfa89d1e87
+:END:
+
+This website doesn't have any kind of analytics running in the
+background. I don't care for keeping track of how many people read my
+blog or any of that.
+
+* Cookies
+:PROPERTIES:
+:CUSTOM_ID: h:1b92da53-c006-4f95-97b9-b3ffbda48de1
+:END:
+
+I don't shove cookies down anyone's throat. You're free to use any
+tools to check this. For example [[https://www.cookiemetrix.com/][Cookie Metrix]] reports that there are
+none.
+
+#+caption: Cookie Metrix report for this website
+[[file:media/cookie_metrix.png]]
+
+* Licenses
+:PROPERTIES:
+:CUSTOM_ID: h:9f114149-6ff8-4bd1-b751-6dd9d78910f0
+:END:
+
+** Content
+:PROPERTIES:
+:CUSTOM_ID: h:c329b911-63ba-4bd3-87fb-9282a922dbbc
+:END:
+
+All of the content on this site, except Emacs Lisp is produced under
+the [[https://creativecommons.org/licenses/by-sa/4.0/][Creative Commons Attribution – Share Alike 4.0 License]] or later,
+which means:
+
+You are free to:
+
+- Share — copy and redistribute the material in any medium or format
+  for any purpose, even commercially.
+- Adapt — remix, transform, and build upon the material for any
+  purpose, even commercially.  The licensor cannot revoke these
+  freedoms as long as you follow the license terms.
+
+Under the following terms:
+
+- Attribution — You must give appropriate credit, provide a link to
+  the license, and indicate if changes were made.
+- You may do so in any reasonable manner, but not in any way that
+  suggests the licensor endorses you or your use. An example is
+  provided [[#h:897c142d-d260-4189-8dec-5401fa7170b5][below]].
+- ShareAlike — If you remix, transform, or build upon the material,
+  you must distribute your contributions under the same license as the
+  original.
+- No additional restrictions — You may not apply legal terms or
+  technological measures that legally restrict others from doing
+  anything the license permits.
+
+All of the Emacs Lisp code on this blog is produced under the [[https://www.gnu.org/licenses/gpl-3.0.html][GNU GPL
+Version 3 or later]] per Emacs convention.
+
+** Source Code
+:PROPERTIES:
+:CUSTOM_ID: h:9d96d4cd-5c4b-41f8-be02-c322e1bea3c0
+:END:
+
+The code that powers this blog is produced under the [[https://opensource.org/license/mit][MIT License]].
+
+* Attribution
+:PROPERTIES:
+:CUSTOM_ID: h:897c142d-d260-4189-8dec-5401fa7170b5
+:END:
+
+Any content from the blog that is used in any of the ways mentioned
+above can be attributed as
+
+#+begin_src html
+Credit to <a href="https://peregrinator.site">Brihadeesh S</a> for the original work.
+#+end_src

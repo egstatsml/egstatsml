@@ -1,0 +1,129 @@
+#+title: Colourless themes for Emacs
+#+date: <2025-04-30 Wed>
+#+options: toc:t
+
+* empty
+:PROPERTIES:
+:CUSTOM_ID: empty
+:UNNUMBERED: notoc
+:END:
+
+#+begin_verse
+Originally published on Sunday {{{smallcaps(19 March 2023)}}}
+#+end_verse
+
+The [[https://git.sr.ht/~peregrinator/colourless-themes][colourless themes]] are a collection of “primarily colourless
+themes". This was forked from Tomas Letan's macro of the same
+name.[fn:1]
+
+* Installation
+:PROPERTIES:
+:CUSTOM_ID: h:a571cc50-5803-4910-94c0-b112ecb3b57e
+:END:
+
+Install this how you would install a package from github - this varies
+with the flavour of Emacs or the setup in use. If you use a
+Frankenstein's monster like I use, do:
+
+#+BEGIN_SRC emacs-lisp :tangle no
+  (use-package colourless-themes
+    :straight (:host sourcehut
+     :repo "peregrinator/colourless-themes")
+
+    :config
+    ;;optionally loading a theme
+    (load-theme 'beelzebub t))
+#+END_SRC
+
+* Usage
+:PROPERTIES:
+:CUSTOM_ID: h:7c3b22ba-5584-4f9d-b6af-6411a868776c
+:END:
+
+Temporarily set it with ~M-x load-theme~, or via ~M-x
+customize-themes~. To make it persistent, see [[file:/emacs/colourless_themes.html#installation][Installation]]. Disable
+any other themes to ensure a colourless experience.
+
+* Featured themes
+:PROPERTIES:
+:CUSTOM_ID: h:50d2f933-b49c-412c-b100-b770c2511099
+:END:
+
+Themes offered besides those from upstream are
+
+** Mephistopheles
+:PROPERTIES:
+:CUSTOM_ID: h:92e5edb3-afa3-4f78-a6d1-59511a370f58
+:END:
+
+~Mephistopheles~ is an original dark theme with yellow and green
+  foreground, again inspired by Stanislav Karkavin's vim theme
+  mentioned above.
+
+  #+attr_html: :class fullwidth
+  #+begin_figure
+  #+caption: Mephistopheles
+  [[file:../media/projects/mephistopheles.png]]
+  #+end_figure
+
+** Beelzebub
+:PROPERTIES:
+:CUSTOM_ID: h:286e81b7-944c-4c67-834b-596e8352e9f9
+:END:
+
+~beelzebub~ A dark, purplish colourscheme based on Stanislav Karkavin's
+vim theme: [[https://github.com/xdefrag/vim-beelzebub][vim-beelzebub]]
+
+#+attr_html: :class fullwidth
+#+begin_figure
+#+caption: Beelzebub
+[[file:../media/projects/beelzebub.png]]
+#+end_figure
+
+** Nofrils
+:PROPERTIES:
+:CUSTOM_ID: h:f28a7e31-68c4-4e33-9eb3-472eb669abd2
+:END:
+
+~nofrils~, Emacs ports /faithful/ to the [[https://github.com/robertmeta/nofrils][original nofrils themes]]. These
+  have a few more colours than the others.
+
+*** Nofrils Acme
+:PROPERTIES:
+:CUSTOM_ID: h:3f6ac168-765d-40ec-8548-4f2e403f47a9
+:END:
+
+#+attr_html: :class fullwidth
+#+begin_figure
+#+caption: Nofrils Acme
+[[file:../media/projects/nofrils-acme.png]]
+#+end_figure
+
+*** Nofrils Dark
+:PROPERTIES:
+:CUSTOM_ID: h:2bb73053-f8b7-4945-92d6-fa677797c47c
+:END:
+
+#+attr_html: :class fullwidth
+#+begin_figure
+#+caption: Nofrils Dark
+[[file:../media/projects/nofrils-dark.png]]
+#+end_figure
+
+* Footnotes
+:PROPERTIES:
+:CUSTOM_ID: h:b53e8b97-5bc5-4730-b562-dd68e2014c83
+:END:
+
+[fn:1] The macro is a rework of theirs — an opinionated take
+perhaps? Find their source code at [[https://git.sr.ht/~lthms/colorless-themes.el][~lthms/colorless-themes.el]]
+
+* Issues and feedback
+:PROPERTIES:
+:CUSTOM_ID: comments
+:UNNUMBERED: notoc
+:END:
+
+#+begin_comments
+Looking to raise issues or provide feedback? You can write an [[mailto:~peregrinator/emacs@lists.sr.ht?subject=Re: Colourless themes for Emacs][email]]. Older responses can be found at my [[https://lists.sr.ht/~peregrinator/emacs][public inbox]].
+#+end_comments

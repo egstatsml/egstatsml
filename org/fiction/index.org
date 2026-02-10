@@ -1,0 +1,3 @@
+#+TITLE: Fiction
+
+- {{{timestamp(01 May 2012)}}} [[file:ahab.org][Ahab]]

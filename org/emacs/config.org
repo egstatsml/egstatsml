@@ -1,0 +1,3 @@
+#+TITLE: Emacs
+
+- {{{timestamp(26.05.2025)}}} [[file:literate-emacs-configuration.org][Literate Emacs Configuration]]
