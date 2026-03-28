@@ -501,6 +501,13 @@ and PUB-DIR the output directory."
 	     :html-preamble header-template
 	     :html-postamble footer-template)
 
+       (list "assets"
+             :recursive t
+             :base-extension "css\\|txt\\|ico\\|png\\|jpg\\|jpeg\\|gif\\|pdf\\|woff\\|woff2\\|js\\|wav\\|xml"
+             :base-directory "./assets"
+             :publishing-directory "./html/assets"
+             :publishing-function 'org-publish-attachment)
+       
        (list "home"
 	     :recursive nil
 	     :base-directory "./index"
@@ -521,7 +528,7 @@ and PUB-DIR the output directory."
 	     :html-postamble footer-template)
 
        (list "base"
-	     :components '("static" "blog posts" "pages" "home"))))
+	     :components '("static" "blog posts" "pages" "assets" "home"))))
 
 (message "building static content")
 

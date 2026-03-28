@@ -1,0 +1,56 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\usepackage{titlesec}
+\titleformat*{\section}{\bfseries}
+\font\titlefont=cmr12 at 12pt
+\font\authorfont=cmr12 at 10pt
+\title{{\titlefont Errata and Addenda For My Articles}}
+\author{{\authorfont Ethan Goan}}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+% NOTE TO MYSELF
+% Don't move or change the name of this, just leave here and then recompile as needed
+
+\section{Uncertainty in Real-Time Semantic Segmentation on Embedded Systems}
+Corrected in arXiv version of paper
+
+typos:
+
+\textbf{Eq.6}  $ p(\mathbf{w} | \mathbf{X}, \mathbf{Y} , \theta ) \propto \Big[\prod_{i=0}^{N-1}\mathcal{N}\Big({\color{red}\mathbf{y}}|f(\mathbf{x}_{i};\theta) \mathbf{w}, \sigma^{2}\Big)\Big] p(\mathbf{w}).$
+
+\textbf{Eq.10 and 12} should read $\sigma^{2}_{N}(\hat{\mathbf{x}}) =
+\sigma^{2} + {\color{red} \Phi}(\hat{\mathbf{x}})^{T}\Sigma_{\pi}{\color{red} \Phi}(\hat{\mathbf{x}})$ and
+$\sigma^{2}_{N}(\hat{\mathbf{x}}) \approx \sigma^{2} +
+{\color{red}\Phi}(\hat{\mathbf{x}})^{T}\Sigma_{\text{diag}}{\color{red}\Phi}(\hat{\mathbf{x}})$
+
+\textbf{Eq. 15}: The approximation from ref [34] in the paper provides the Taylor Series approximation of
+
+$ \mathcal{N}\Big(\frac{\mu_{j}}{\mu_{d}},\frac{\mu_{j}^{2}}{\mu_{d}^{2}}\big(\sigma^{2}_{j} / \mu_{j}^{2} +  \sigma^{2}_{d} / \mu_{d}^{2} \big)\Big)$. The issue with this is the square of the $\mu_{d}$ terms, as this is at risk of numerical overflow in single-point precision. Instead we use $\sigma^{2} \approx \mu_{j} / \mu_{d}\sqrt{\sigma^{2}_{j} + \sigma^{2}_{d}}$, which emperically follwed a similar trend and was less of a risk for numerical overflow (though not immune).
+
+\section{Piecewise Deterministic Markov Processes for Bayesian Neural Networks}
+Corrected in arXiv version of paper
+
+\textbf{Eq. 5}: $  \Sigma_{\star } = \gamma \Big[ \sum_{i=0}^{N}\frac{\partial}{\partial \mathbf{\omega}^{2}} -\log p(\mathbf{y}_{i}|\mathbf{x}_{i}, \mathbf{\omega})\Big] ^{-1}$
+
+\textbf{Eq. 11}: $t_{i} =  -b_{i} / a_{i} + \sqrt{b_{i}^{2} +  a_{i}^{2}t_{i-1}^{2} + 2a_{i}b_{i}t_{i-1} - 2a_{i}log(1 - U)}\big ) /a_{i}$
+
+\textbf{Bug}: When preparing my thesis, I found a bug in the code where gradients were not being appropriately scaled by the mini-batch and dataset size. Experiments rerun with results on arXiv. I also added some clarification to the event rate sampling algorithm which clarifies some of the results of how thinning work. This is captured by the $R$ term in Algorithm 2, and we explore this more in Appendix A. Code updated on Github as well.
+
+\end{document}

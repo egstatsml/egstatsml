@@ -1,0 +1,766 @@
+@charset "UTF-8";
+
+/* Junicode */
+
+@font-face {
+    font-family: "junicode";
+    src: url("/fonts/junicode/JunicodeVF-Roman.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "junicode";
+    src: url("/fonts/junicode/JunicodeVF-Italic.woff2") format("woff2");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Import ET Book styles
+   adapted from https://github.com/edwardtufte/et-book/blob/gh-pages/et-book.css */
+
+@font-face {
+    font-family: "et-book";
+    src: url("/fonts/et-book/et-book-roman-old-style-figures.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book";
+    src: url("/fonts/et-book/et-book-display-italic-old-style-figures.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book";
+    src: url("/fonts/et-book/et-book-semi-bold-old-style-figures.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Iosevka for mono-spaced fonts */
+
+@font-face {
+    font-family: "cmu-typewriter";
+    font-weight: normal;
+    font-style: normal;
+    src: url("/fonts/typewriter/cmuntt.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "cmu-typewriter";
+    font-weight: normal;
+    font-style: italic;
+    src: url("/fonts/typewriter/cmunit.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "cmu-typewriter";
+    font-weight: bold;
+    font-style: normal;
+    src: url("/fonts/typewriter/cmuntb.woff") format("woff");
+    font-display: swap;
+}
+
+/* @font-face { */
+/*     font-family: "Iosevka Term Slab"; */
+/*     font-display: swap; */
+/*     font-weight: bold; */
+/*     font-stretch: normal; */
+/*     font-style: italic; */
+/*     src: url("/fonts/iosevka/IosevkaTermSlab-MediumItalic.woff2") format("woff2"); */
+/* } */
+
+/* light theme by default */
+[data-theme="light"] {
+    --tufte-background: #fffff8;
+    --tufte-foreground: #111;
+    --tufte-foreground-secondary: #444;
+    --tufte-link: #9f0000;
+
+    /* Syntax highlighting
+     * Stimmung-Theme by  Love Lagerkvist
+     * Released under the GNU GPLv3 the source code can be retrieved from:
+     * https://github.com/motform/stimmung-themes
+     *
+     * CSS generated using `org-html-htmlize-generate-css'
+     */
+
+    .src pre {
+	color: #000000;
+	background-color: #ffffff;
+    }
+    .org-builtin {
+	/* font-lock-builtin-face */
+	color: #000000;
+	background-color: #fff8dc;
+	font-style: italic;
+    }
+    .org-comment {
+	/* font-lock-comment-face */
+	color: #000000;
+	background-color: #f2f2f2;
+	font-style: italic;
+    }
+    .org-comment-delimiter {
+	/* font-lock-comment-delimiter-face */
+	color: #000000;
+	background-color: #f2f2f2;
+	font-style: italic;
+    }
+    .org-constant {
+	/* font-lock-constant-face */
+	color: #000000;
+	background-color: #fff8dc;
+	font-style: italic;
+    }
+    .org-doc {
+	/* font-lock-doc-face */
+	color: #000000;
+	background-color: #f2f2f2;
+    }
+    .org-doc-markup {
+	/* font-lock-doc-markup-face */
+	color: #000000;
+	background-color: #fff8dc;
+    }
+    .org-error {
+	/* error */
+	color: #8b0000;
+    }
+    .org-escape {
+	/* font-lock-escape-face */
+	color: #000000;
+	font-style: italic;
+    }
+    .org-function-call {
+	/* font-lock-function-call-face */
+	color: #000000;
+	font-weight: bold;
+    }
+    .org-function-name {
+	/* font-lock-function-name-face */
+	color: #000000;
+	font-weight: bold;
+    }
+    .org-keyword {
+	/* font-lock-keyword-face */
+	color: #000000;
+    }
+    .org-preprocessor {
+	/* font-lock-preprocessor-face */
+	color: #000000;
+    }
+    .org-property-name {
+	/* font-lock-property-name-face */
+	color: #000000;
+    }
+    .org-property-use {
+	/* font-lock-property-use-face */
+	color: #000000;
+	font-style: italic;
+    }
+    .org-string {
+	/* font-lock-string-face */
+	color: #000000;
+	background-color: #f2f2f2;
+    }
+    .org-type {
+	/* font-lock-type-face */
+	color: #000000;
+	font-style: italic;
+    }
+    .org-variable-name {
+	/* font-lock-variable-name-face */
+	color: #000000;
+	font-weight: bold;
+    }
+    .org-warning {
+	/* warning */
+	color: #ffa500;
+    }
+    .org-warning-1 {
+	/* font-lock-warning-face */
+	color: #000000;
+	text-decoration: underline;
+    }
+}
+
+/* dark theme on toggle */
+[data-theme="dark"] {
+    --tufte-background: #151515;
+    --tufte-foreground: #ddd;
+    --tufte-foreground-secondary: #ccc;
+    --tufte-link: #f8b8b8;
+
+    /* Syntax highlighting
+     * Stimmung-Theme by  Love Lagerkvist
+     * Released under the GNU GPLv3 the source code can be retrieved from:
+     * https://github.com/motform/stimmung-themes
+     *
+     * CSS generated using `org-html-htmlize-generate-css'
+     */
+    .src pre {
+	color: #ffffff;
+	background-color: #1E1E1E;
+    }
+    .org-builtin {
+	/* font-lock-builtin-face */
+	color: #ffffff;
+	background-color: #40382b;
+	font-style: italic;
+    }
+    .org-comment {
+	/* font-lock-comment-face */
+	color: #ffffff;
+	background-color: #333333;
+	font-style: italic;
+    }
+    .org-comment-delimiter {
+	/* font-lock-comment-delimiter-face */
+	color: #ffffff;
+	background-color: #333333;
+	font-style: italic;
+    }
+    .org-constant {
+	/* font-lock-constant-face */
+	color: #ffffff;
+	background-color: #40382b;
+	font-style: italic;
+    }
+    .org-doc {
+	/* font-lock-doc-face */
+	color: #ffffff;
+	background-color: #333333;
+    }
+    .org-doc-markup {
+	/* font-lock-doc-markup-face */
+	color: #ffffff;
+	background-color: #40382b;
+    }
+    .org-error {
+	/* error */
+	color: #ff6a6a;
+    }
+    .org-escape {
+	/* font-lock-escape-face */
+	color: #ffffff;
+	background-color: #1E1E1E;
+	font-style: italic;
+    }
+    .org-function-name {
+	/* font-lock-function-name-face */
+	color: #ffffff;
+	background-color: #1E1E1E;
+	font-weight: bold;
+    }
+    .org-keyword {
+	/* font-lock-keyword-face */
+	color: #ffffff;
+	background-color: #1E1E1E;
+    }
+    .org-preprocessor {
+	/* font-lock-preprocessor-face */
+	color: #ffffff;
+	background-color: #1E1E1E;
+    }
+    .org-property-name {
+	/* font-lock-property-name-face */
+	color: #ffffff;
+    }
+    .org-property-use {
+	/* font-lock-property-use-face */
+	color: #ffffff;
+    }
+    .org-string {
+	/* font-lock-string-face */
+	color: #ffffff;
+	background-color: #333333;
+    }
+    .org-type {
+	/* font-lock-type-face */
+	color: #ffffff;
+	background-color: #1E1E1E;
+	font-style: italic;
+    }
+    .org-variable-name {
+	/* font-lock-variable-name-face */
+	color: #ffffff;
+	background-color: #1E1E1E;
+	font-weight: bold;
+    }
+    .org-warning {
+	/* warning */
+	color: #ffa500;
+    }
+    .org-warning-1 {
+	/* font-lock-warning-face */
+	color: #ff6a6a;
+    }
+}
+
+
+/* Tufte CSS styles */
+html {
+    font-size: 15px;
+}
+
+body {
+    /* width: 87.5%; */
+    width: auto;
+    /* margin-left: auto; */
+    margin-left: 120px;
+    margin-right: auto;
+    padding-left: 12.5%;
+    font-family: junicode, "et-book", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    background-color: var(--tufte-background);
+    color: var(--tufte-foreground);
+    max-width: 1400px;
+    counter-reset: sidenote-counter;
+
+    transition: all 300ms ease;
+
+    /* https://www.30secondsofcode.org/css/s/footer-at-the-bottom/#using-flexbox */
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    font-feature-settings: "onum", "pnum";
+}
+
+pre, code, kbd, #top, #postamble {
+    font-feature-settings: normal;
+}
+
+h1 {
+    /* font-style: italic; */
+    font-weight: 400;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    font-size: 3.2rem;
+    line-height: 1;
+}
+
+h2 {
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 2.1rem;
+    margin-bottom: 1.4rem;
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+h3 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+    line-height: 1;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    width: 55%;
+    border: 0;
+    border-top: 1px solid var(--tufte-foreground-secondary);
+    margin: 1em 0;
+    padding: 0;
+}
+
+p.subtitle {
+    font-style: italic;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    display: block;
+    line-height: 1;
+}
+
+p.subtitle,
+time.datetime,
+.figure-number,
+.numeral {
+    font-variant: small-caps;
+}
+
+.danger {
+    color: red;
+}
+
+article {
+    padding: 5rem 0 0 0;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+p,
+dl,
+ol,
+ul {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+p {
+    margin-top: 1.4rem;
+    margin-bottom: 1.4rem;
+    padding-right: 0;
+    vertical-align: baseline;
+}
+
+/* in lieu of absent bold fonts */
+b {
+    font-weight: 400;
+    color: var(--tufte-link);
+}
+
+/* chapter Epigraphs */
+div.epigraph {
+    margin: 5em 0;
+}
+
+div.epigraph > blockquote {
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+div.epigraph > blockquote,
+div.epigraph > blockquote > p {
+    font-style: italic;
+}
+
+div.epigraph > blockquote > footer {
+    font-style: normal;
+}
+
+div.epigraph > blockquote > footer > cite {
+    font-style: italic;
+}
+/* end chapter epigraphs styles */
+
+blockquote {
+    font-size: 1.4rem;
+}
+
+blockquote p {
+    width: 55%;
+    margin-right: 40px;
+}
+
+blockquote footer {
+    width: 55%;
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+section > p,
+section > footer,
+section > table {
+    width: 55%;
+}
+
+/* 50 + 5 == 55, to be the same width as paragraph */
+section > dl,
+section > ol,
+section > ul {
+    width: 50%;
+    -webkit-padding-start: 5%;
+}
+
+dt:not(:first-child),
+li:not(:first-child) {
+    margin-top: 0.25rem;
+}
+
+figure {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    max-width: 55%;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    /* margin: 0 0 1em 0; */
+    display: flex;
+    flex-direction: column;
+}
+
+figcaption {
+    float: right;
+    clear: right;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    /* font-style: italic; */
+    font-size: 1rem;
+    line-height: 1.6;
+    vertical-align: baseline;
+    position: relative;
+    max-width: 40%;
+}
+
+figure.fullwidth figcaption {
+    margin-right: 24%;
+}
+
+.table-number,
+.figure-number {
+    color: var(--tufte-link);
+}
+
+a,
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration-color: var(--tufte-link);
+    text-underline-offset: 0.1em;
+    text-decoration-thickness: 0.05em;
+}
+
+a:hover {
+    color: var(--tufte-link);
+}
+
+/* Sidenotes, margin notes, figures, captions */
+img {
+    max-width: 100%;
+}
+
+.sidenote,
+.marginnote {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+}
+
+.marginnote > figure > figcaption {
+    font-size: 1rem;
+}
+
+.sidenote-number {
+    counter-increment: sidenote-counter;
+    color: var(--tufte-link);
+}
+
+.sidenote-number:after,
+.sidenote:before {
+	font-family: et-book-roman-old-style;
+	position: relative;
+	vertical-align: baseline;
+    }
+
+    .sidenote-number:after {
+	content: counter(sidenote-counter);
+	font-size: 1rem;
+	top: -0.5rem;
+	left: 0.1rem;
+    }
+
+    .sidenote:before {
+	content: counter(sidenote-counter) " ";
+	font-size: 1rem;
+	top: -0.5rem;
+    }
+
+    blockquote .sidenote,
+    blockquote .marginnote {
+	margin-right: -82%;
+	min-width: 59%;
+	text-align: left;
+    }
+
+    div.fullwidth,
+    table.fullwidth {
+	width: 100%;
+    }
+
+    div.table-wrapper {
+	overflow-x: auto;
+	/* font-family: "Trebuchet MS", "Gill Sans", "Gill Sans MT", sans-serif; */
+    }
+
+    .sans {
+	/* font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; */
+	font-family: sans-serif;
+	letter-spacing: .03em;
+    }
+
+    kbd, code, pre > code {
+	font-family: "cmu-typewriter", monospace;
+	font-size: 1.0rem;
+	line-height: 1.42;
+	-webkit-text-size-adjust: 100%; /* Prevent adjustments of font size after orientation changes in iOS. See https://github.com/edwardtufte/tufte-css/issues/81#issuecomment-261953409 */
+    }
+
+    .sans > code {
+	font-size: 1.2rem;
+    }
+
+    h1 > code,
+    h2 > code,
+    h3 > code {
+	font-size: 0.80em;
+    }
+
+    .marginnote > code,
+    .sidenote > code {
+	font-size: 1rem;
+    }
+
+    pre > code {
+	font-size: 0.9rem;
+	width: 52.5%;
+	margin-left: 2.5%;
+	overflow-x: auto;
+	display: block;
+    }
+
+    pre.fullwidth > code {
+	width: 90%;
+    }
+
+    .fullwidth {
+	max-width: 90%;
+	clear:both;
+    }
+
+    span.newthought {
+	font-variant: small-caps;
+	font-size: 1.2em;
+    }
+
+    input.margin-toggle {
+	display: none;
+    }
+
+    label.sidenote-number {
+	display: inline-block;
+	max-height: 2rem; /* should be less than or equal to paragraph line-height */
+    }
+
+    label.margin-toggle:not(.sidenote-number) {
+	display: none;
+    }
+
+    .iframe-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+    }
+
+    .iframe-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    }
+
+    @media (max-width: 760px) {
+	body {
+            width: 84%;
+            padding-left: 8%;
+            padding-right: 8%;
+	}
+
+	hr,
+	section > p,
+	section > footer,
+	section > table {
+            width: 100%;
+	}
+
+	pre > code {
+            width: 97%;
+	}
+
+	section > dl,
+	section > ol,
+	section > ul {
+            width: 90%;
+	}
+
+	figure {
+            max-width: 90%;
+	}
+
+	figcaption,
+	figure.fullwidth figcaption {
+            margin-right: 0%;
+            max-width: none;
+	}
+
+	blockquote {
+            margin-left: 1.5em;
+            margin-right: 0em;
+	}
+
+	blockquote p,
+	blockquote footer {
+            width: 100%;
+	}
+
+	/* label.margin-toggle:not(.sidenote-number) { */
+	/*     display: inline; */
+	/* } */
+
+	.sidenote {
+            display: none;
+	}
+
+	.margin-toggle:checked + .sidenote,
+	.marginnote {
+            display: block;
+            float: none;
+            clear: none;
+            width: 80%;
+            margin: 1rem;
+            vertical-align: baseline;
+            position: relative;
+	    /* from https://ogbe.net/res/style.css */
+	    border-bottom: 1px solid var(--tufte-foreground-secondary);
+	    border-top: 1px solid var(--tufte-foreground-secondary);
+	    padding: 0.5rem;
+	}
+
+	.zeroth-section > .marginnote {
+	    border-top: none;
+	}
+
+	label {
+            cursor: pointer;
+	}
+
+	div.table-wrapper,
+	table {
+            width: 85%;
+	}
+
+	img {
+            width: 100%;
+	}
+    }

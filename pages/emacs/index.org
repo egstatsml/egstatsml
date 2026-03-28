@@ -13,27 +13,9 @@
 #+end_marginnote
 #+end_zeroth-section
 
-I have been using GNU Emacs for the last 4 years or so, since I
-migrated from Neovim, after atleast a few attempts at figuring out
-this juggernaut. I've moved most of my workflows into Emacs —
-specifically using Org mode — and so it has become an almost integral
-part of how I do nearly everything.
-
-This is a collection of all the Emacs package(s) I've written and hope
-to write over the coming years when I finally figure Emacs Lisp
-out. This also includes my (il)literate Emacs configuration, which to
-be honest is just a motley assembly of various snippets I've stolen
-from others. I'm still in the process of learning elisp so please bear
-with my (potentially) horribly written code! You can also view these
-on my Sourcehut [[https://sr.ht/~peregrinator/][projects page]].
+I use Emacs for everything, and am greatful for a lot of the tools that others have made and share. I aim to share some of my experiences and developments in Emacs with others (when I have time).
 
 #+begin_export html
 <br>
 <hr style="margin-bottom:0;"/>
 #+end_export
-
-* Peregrinator's Emacs
-
-#+begin_blog-entries
-#+INCLUDE: "../../emacs/config.org" :lines "3-"
-#+end_blog-entries

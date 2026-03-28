@@ -1,0 +1,98 @@
+/* aside + nav-bar = asidebar! */
+/* adapted from https://lawler.io */
+/* https://github.com/Eiriksmal/lawler-dot-io-template */
+
+.asidebar {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 5%;
+    overflow-x: hidden;
+    width: 200px;
+    /* padding: 4rem; */
+    /* padding-top: 10rem; */
+
+    margin: 10rem 0;
+}
+
+.asidebar .logo {
+    text-align: right;
+    margin-bottom: 2rem;
+    min-height: 123px;
+}
+
+.asidebar .main-menu ul {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    color: inherit;
+}
+
+.asidebar .main-menu ul li {
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.asidebar .main-menu ul li a {
+    position: relative;
+    padding: 10px 10px;
+
+    &:hover {
+	color: var(--tufte-link)
+    }
+}
+
+
+/* sidebar mobile-ish break that coincides with Tufte's sidenotes disappearing */
+@media screen and (max-width: 760px) {
+    body {
+	margin-left: auto;
+    }
+
+    article {
+	padding: 0;
+    }
+
+    .asidebar {
+	height: auto;
+	position: relative;
+	overflow: auto;
+	width: 100%;
+	left: 0;
+	padding: 0;
+
+	display: flex;
+	flex-direction: column;
+	/* justify-content: flex-start; */
+	align-items: center;
+	margin: 2rem 0;
+    }
+
+    .asidebar .logo {
+        margin-bottom: 0;
+	max-width: 100%;
+	text-align: center;
+    }
+
+    .asidebar .main-menu ul {
+	padding: 0;
+	margin: 0.5rem 0;
+	justify-content: center;
+	text-align: center;
+	/* overflow: hidden; */
+	display: flex;
+	flex-flow: row wrap;
+    }
+
+    .asidebar .main-menu ul li {
+	margin: 0.25rem;
+	padding: 0;
+	float: left;
+	overflow: hidden;
+	/* list-style: none; */
+	/* overflow-y: clip; */
+    }
+}
