@@ -47,8 +47,6 @@ In Table 1, predictive performance metrics for PIDNet used the pre-trained weigh
 \section{Piecewise Deterministic Markov Processes for Bayesian Neural Networks}
 Corrected in arXiv version of paper
 
-\textbf{Eq. 5}: $  \Sigma_{\star } = \gamma \Big[ \sum_{i=0}^{N}\frac{\partial}{\partial \mathbf{\omega}^{2}} -\log p(\mathbf{y}_{i}|\mathbf{x}_{i}, \mathbf{\omega})\Big] ^{-1}$
-
 \textbf{Eq. 11}: $t_{i} =  -b_{i} / a_{i} + \sqrt{b_{i}^{2} +  a_{i}^{2}t_{i-1}^{2} + 2a_{i}b_{i}t_{i-1} - 2a_{i}log(1 - U)}\big ) /a_{i}$
 
 \textbf{Bug}: When preparing my thesis, I found a bug in the code where gradients were not being appropriately scaled by the mini-batch and dataset size. Experiments rerun with results on arXiv. I also added some clarification to the event rate sampling algorithm which clarifies some of the results of how thinning work. This is captured by the $R$ term in Algorithm 2, and we explore this more in Appendix A. Code updated on Github as well.
