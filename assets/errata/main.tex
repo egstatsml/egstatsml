@@ -56,13 +56,13 @@ Corrected in arXiv version of paper
 \section{Bayesian Neural Networks: An Introduction and Survey}
 Corrected on arXiv
 
-The leapfrog steps in \textbf{Eqns. 29-31} should read,
-\begin{align*}
-  v_i(t + \frac{\epsilon}{2}) = v_i(t) + \frac{\epsilon}{2} \dfrac{\partial U}{\partial w_{i}}(v(t)),
-  \\
-  w_i(t + \epsilon) = w_i(t) + \epsilon \frac{v_{i}(t + \epsilon /2)}{m_{i}},
-  \\
-  v_i(t + \epsilon) = v_i(t +\frac{\epsilon}{2}) - \frac{\epsilon}{2} \dfrac{\partial U}{\partial w_{i}}(v(t + \epsilon)).
-\end{align*}
+% The leapfrog steps in \textbf{Eqns. 29-31} should read,
+% \begin{align*}
+%   v_i(t + \frac{\epsilon}{2}) = v_i(t) + \frac{\epsilon}{2} \dfrac{\partial U}{\partial w_{i}}(v(t)),
+%   \\
+%   w_i(t + \epsilon) = w_i(t) + \epsilon \frac{v_{i}(t + \epsilon /2)}{m_{i}},
+%   \\
+%   v_i(t + \epsilon) = v_i(t +\frac{\epsilon}{2}) - \frac{\epsilon}{2} \dfrac{\partial U}{\partial w_{i}}(v(t + \epsilon)).
+% \end{align*}
 For the $\alpha$ divergence on page 31, the limits to relate to forward/reverse KL divergence and Hellinger distance were not correct. It should be, $KL(q|p): \alpha \rightarrow 0, KL(p|q): \alpha \rightarrow 1,$ Hellinger: $ \alpha \rightarrow 0.5$.
 \end{document}
