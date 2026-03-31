@@ -18,7 +18,7 @@
 \titleformat*{\section}{\bfseries}
 \font\titlefont=cmr12 at 12pt
 \font\authorfont=cmr12 at 10pt
-\title{{\titlefont Comments, Errata, and Addenda For My Articles}}
+\title{{\titlefont Comments and Errata}}
 \author{{\authorfont Ethan Goan}}
 \date{\small \today}
 % Redefinition of ToC command to get centered heading
@@ -49,13 +49,17 @@ $ \mathcal{N}\Big(\frac{\mu_{j}}{\mu_{d}},\frac{\mu_{j}^{2}}{\mu_{d}^{2}}\big(\s
 
 In Table 1, predictive performance metrics for PIDNet used the pre-trained weights from the official repo for the testing set of CityScapes, which appears to have included the validation data during training. The mIOU for PIDNet and Bayes-PIDNet with the weights for the validation set are 0.761 and 0.758 respectively.
 
+\vspace*{1cm}
 \section{Piecewise Deterministic Markov Processes for Bayesian Neural Networks}
 Corrected on arXiv
+
+\textbf{Eq. 10}: $t_{i} = \Lambda^{-1}(\Lambda(t_{i-1}) - \ln U)$
 
 \textbf{Eq. 11}: $t_{i} =  -b_{i} / a_{i} + \sqrt{b_{i}^{2} +  a_{i}^{2}t_{i-1}^{2} + 2a_{i}b_{i}t_{i-1} - 2a_{i}log(1 - U)}\big ) /a_{i}$
 
 \textbf{Bug}: When preparing my thesis, I found a bug in the code where gradients were not being appropriately scaled by the mini-batch and dataset size. Experiments rerun with results on arXiv. I also added some clarification to the event rate sampling algorithm which clarifies some of the results of how thinning work. This is captured by the $R$ term in Algorithm 2, and we explore this more in Appendix A. Code updated on Github as well.
 
+\vspace*{1cm}
 \section{Bayesian Neural Networks: An Introduction and Survey}
 Corrected on arXiv
 
