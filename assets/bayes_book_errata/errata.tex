@@ -1,0 +1,56 @@
+\documentclass{article}
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+\usepackage[letterpaper,% Set the height and width of the paper
+includehead,
+nomarginpar,% We don't want any margin paragraphs
+textwidth=15cm,% Set \textwidth to 15cm
+headheight=1mm,% Set \headheight to 10mm
+]{geometry}
+
+\usepackage{fancyhdr}
+\fancyhead{} % clear all header fields
+\fancyfoot{} % clear all footer fields
+\renewcommand{\headrulewidth}{0pt}  % no line in header area
+\renewcommand{\footrulewidth}{1pt}  % no line in header area
+\pagestyle{fancy}
+\fancyfoot[L]{\today}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\usepackage{titlesec}
+% \renewcommand{\contentsname}{}
+\titleformat*{\section}{\bfseries}
+\font\titlefont=cmr12 at 15pt
+\font\authorfont=cmr12 at 10pt
+\title{{\titlefont Errata: Uncertainty in Real-Time Semantic Segmentation on Embedded Systems}}
+\author{{\authorfont Ethan Goan}}
+\date{} % no date
+
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy} % make footer appear
+Errata Corrected on arXiv version of paper.
+
+\textbf{Eqn 30} on page 20 for leap frog integration, the step should be $\epsilon/2$. I am not happy with the notation there. Instead use,
+
+\begin{align}
+  v_i(t + \frac{\epsilon}{2}) = v_i(t) + \frac{\epsilon}{2} \dfrac{dv_{i}(t)}{dt}(v(t)),
+  \\
+  w_i(t + \epsilon) = w_i(t) + \epsilon \frac{dw_{i}(t + \epsilon /2)}{dt},
+  \\
+  v_i(t + \epsilon) = v_i(t +\frac{\epsilon}{2}) + \frac{\epsilon}{2} \dfrac{dv_{i}(t + \epsilon)}{dt}.
+\end{align}
+
+For the $\alpha$ divergence on page 31, the limits to relate to forward/reverse KL divergence and Hellinger distance were not correct. It should be, $KL(q|p): \alpha \rightarrow 0, KL(p|q): \alpha \rightarrow 1,$ Hellinger: $ \alpha \rightarrow 0.5$.
+
+\textbf{Eq. 58} missing factor of $1/2$, and should be stated that this is the squared Hellinger Distance, which is a valid distance metric.
+
+\end{document}

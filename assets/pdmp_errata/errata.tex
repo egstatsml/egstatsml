@@ -1,0 +1,57 @@
+\documentclass{article}
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+\usepackage[letterpaper,% Set the height and width of the paper
+includehead,
+nomarginpar,% We don't want any margin paragraphs
+textwidth=15cm,% Set \textwidth to 15cm
+headheight=1mm,% Set \headheight to 10mm
+]{geometry}
+
+\usepackage{fancyhdr}
+\fancyhead{} % clear all header fields
+\fancyfoot{} % clear all footer fields
+\renewcommand{\headrulewidth}{0pt}  % no line in header area
+\renewcommand{\footrulewidth}{1pt}  % no line in header area
+\pagestyle{fancy}
+\fancyfoot[L]{\today}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\usepackage{titlesec}
+% \renewcommand{\contentsname}{}
+\titleformat*{\section}{\bfseries}
+\font\titlefont=cmr12 at 15pt
+\font\authorfont=cmr12 at 10pt
+\title{{\titlefont Errata: Piecewise Deterministic Markov Processes for Bayesian Neural Networks}}
+\author{{\authorfont Ethan Goan}}
+\date{} % no date
+
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy} % make footer appear
+Errata Corrected on arXiv version of paper~\cite{goan2023piecewise}.
+
+
+There is an incorrect negative sign in the dynamics for the Boomerang Sampler, it should read,
+$\Psi(\omega, \mathbf{v}, t)_{\omega} = \omega_{\star} + (\omega^{i} - \omega_{\star})\cos(t) + \mathbf{v}^{i}\sin(t)$
+
+\textbf{Eq. 10}: $t_{i} = \Lambda^{-1}(\Lambda(t_{i-1}) - \ln U)$
+
+\textbf{Eq. 11}: $t_{i} =  -b_{i} / a_{i} + \sqrt{b_{i}^{2} +  a_{i}^{2}t_{i-1}^{2} + 2a_{i}b_{i}t_{i-1} - 2a_{i}log(1 - U)}\big ) /a_{i}$
+
+\textbf{Bug}: When preparing my thesis, I found a bug in the code where gradients were not being appropriately scaled by the mini-batch and dataset size. Experiments rerun with results on arXiv.
+
+I also added some clarification to the event rate sampling algorithm which clarifies some of the results of how thinning work. This is captured by the $R$ term in Algorithm 2, and we explore this more in Appendix A. This $R$ term was initially there during debugging of of the approximate thinning algorithm, which acted to say that if the acceptence ratio exceeded $R$, then we should reject the proposal and update our approximate upper bound to try and correct for it. This is why the acceptence rates for the boomerang sampler are so tightly clustered around 1; the proposal exceeded this threshold and we rejected this proposal to try and improve our upper bound. This will is due to the non-linear dynamics of the boomerang sampler, meaning it will induce greater bias to samples the from the approximate posterior.
+
+Code updated on Github as well.
+\bibliographystyle{abbrv}
+\bibliography{ref}
+\end{document}
