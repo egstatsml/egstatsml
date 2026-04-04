@@ -12,7 +12,7 @@
 
 I am a research fellow at [[https://www.qut.edu.au/][QUT]] in the school of Electrical Engineering and Robotics, where I also completed my PhD in 2024 and my undergraduate in Electrical Engineering. My research focuses on uncertainty quantification in computer vision, machine learning and biomechanics. I have interests in statistics, embedded systems, Emacs, and much more which I may/may not occasionally write about.
 
-You can contact me at: ej <dot> goan <at> qut <dot> edu <dot> au
+You can contact me at: ej[dot]goan[at]qut[dot]edu[dot]au
 #+begin_export html
 <br>
 <hr style="margin-bottom:0;"/>
